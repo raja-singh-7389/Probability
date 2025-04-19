@@ -1,0 +1,30 @@
+{
+    "name": "Manim Dev",
+    "image": "mcr.microsoft.com/devcontainers/universal:latest",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11"
+        },
+        "ghcr.io/devcontainers/features/apt:1": {
+            "packages": [
+                "build-essential",
+                "cmake",
+                "pkg-config",
+                "libcairo2-dev",
+                "ffmpeg",
+                "texinfo",
+                "texlive",
+                "texlive-latex-extra",
+                "psmisc"
+            ]
+        }
+    },
+    "postCreateCommand": "pip3 install --user --upgrade pip setuptools wheel && pip3 install --user manim",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    }
+}
